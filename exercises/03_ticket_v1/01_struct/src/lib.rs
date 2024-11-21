@@ -2,7 +2,16 @@
 // - `price`, an unsigned integer
 // - `quantity`, an unsigned integer
 //
+pub struct Order {
+    price: u32,
+    quantity: u32
+}
 // It should also have a method named `is_available` that returns a `true` if the quantity is
+impl Order {
+    fn is_available(&self) -> bool {
+        self.quantity > 0
+    }
+}
 // greater than 0, otherwise `false`.
 
 #[cfg(test)]
